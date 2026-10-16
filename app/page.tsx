@@ -1,4 +1,7 @@
+import Link from "next/link"
 import Navbar from "@/components/Navbar"
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
@@ -10,6 +13,8 @@ export default function Home() {
           pin comments, compare revisions, and more. nextdraft is a tool for artists
           who value feedback delivered seamlessly.
         </p>
+        {/* Use cn helper to join class names more reliably */}
+        <Link href="#" className={cn(buttonVariants({variant: "default", size: "lg"}), "mt-6")}>Sign Up</Link>
       </div>
     </>
   );
